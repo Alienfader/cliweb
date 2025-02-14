@@ -3,25 +3,49 @@
 import * as bin from './index';
 import config from '../../../config.json';
 
-// Help
+// Help - Organized List of Commands
 export const help = async (args: string[]): Promise<string> => {
-  const commands = Object.keys(bin).sort().join(', ');
-  var c = '';
-  for (let i = 1; i <= Object.keys(bin).sort().length; i++) {
-    if (i % 7 === 0) {
-      c += Object.keys(bin).sort()[i - 1] + '\n';
-    } else {
-      c += Object.keys(bin).sort()[i - 1] + ' ';
-    }
-  }
-  return `Welcome! Here are all the available commands:
-\n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+  return `Welcome to Alienfader's Terminal! 👽🛸
+
+📌 **General Commands**
+  - help       → Display available commands
+  - banner     → Show the welcome banner
+  - sumfetch   → Display a user summary
+🔗 **Redirection Commands**
+  - repo       → Open the GitHub repository
+  - resume     → Open my latest resume
+  - readme     → Open the GitHub README file
+👤 **About & Contact**
+  - about      → Learn more about me
+  - email      → Contact me via email
+  - github     → Open my GitHub profile
+  - linkedin   → Open my LinkedIn profile
+💰 **Donation Commands**
+  - donate     → Support my work (PayPal/Patreon)
+🌎 **Web Search**
+  - google <query>     → Search Google
+  - duckduckgo <query> → Search DuckDuckGo
+  - bing <query>       → Search Bing
+  - reddit <query>     → Search Reddit
+🔧 **System & Linux Commands**
+  - echo <text>  → Output text
+  - whoami       → Show your username
+  - ls           → List files (mock command)
+  - cd           → 'nope.' (mock command)
+  - date         → Show current date/time
+  - vi, vim, nvim, emacs → Fun text editor responses
+  - sudo         → Permission denied (and a surprise 😆)
+💻 **Skills & Knowledge**
+  - skills      → Show my cybersecurity and programming skills
+🤣 **Fun & Entertainment**
+  - joke       → Get a random programming joke
+✨ **Shortcuts**
+  - [tab]       → Autocomplete commands
+  - [ctrl+l]    → Clear the terminal
+
+Type 'sumfetch' to display a summary.
 `;
 };
-
 // Redirection
 export const repo = async (args: string[]): Promise<string> => {
   window.open(`${config.repo}`);
