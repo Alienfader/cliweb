@@ -46,7 +46,7 @@ export const resume = async (args: string[]): Promise<string> => {
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
   return `thank you for your interest. 
-here are the ways you can support my work:
+here are the ways you can support my coffee addiction:
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
 `;
@@ -104,12 +104,24 @@ export const ls = async (args: string[]): Promise<string> => {
   return `
 .ssh
 root
-secret_files`;
+secret_files
+NASA_rejection_letter.pdf`;
 };
-
+export const skills = async (args: string[]): Promise<string> => {
+  return `My Skills:
+-Cybersecurity & Red Teaming: Penetration Testing, Threat Hunting, Incident Response, Vulnerability Assessments
+-Offensive Security Tools: Metasploit, Cobalt Strike, Burp Suite, Nmap, Wireshark, SQLmap, Hydra, John the Ripper
+-Defensive Security & Monitoring: SIEM (Splunk, Elastic), EDR (CrowdStrike, SentinelOne), IDS/IPS (Snort, Suricata)
+-Programming & Scripting: Python, Bash, PowerShell
+-Exploit Development & Reverse Engineering: Ghidra, IDA Pro, Assembly, Binary Exploitation
+-Cloud & Network Security: AWS, Azure, Firewalls, VPNs, Proxies, Network Traffic Analysis
+-DevSecOps & Automation: CI/CD Security, GitHub Actions, Docker, Kubernetes, Ansible
+-Capture The Flag (CTF) & Ethical Hacking: Web Exploitation, Privilege Escalation, Cryptography, Reverse Engineering
+-Compliance & Frameworks: MITRE ATT&CK, NIST 800-53, Cyber Kill Chain, ISO 27001
+`;
+};
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `nope.`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -134,7 +146,17 @@ export const emacs = async (args?: string[]): Promise<string> => {
 
 export const sudo = async (args?: string[]): Promise<string> => {
   window.open('https://youtu.be/g_vZasFzMN4?si=EpRlxTl6k3AZo1JO', '_blank'); // ...I'm sorry
-  return `Permission denied: silly user.`;
+  return `Permission denied: Silly user.`;
+};
+const jokes = [
+  "Why do programmers prefer dark mode? Because light attracts bugs!",
+  "There are 10 types of people in the world: those who understand binary and those who don’t.",
+  "Why don’t programmers like nature? It has too many bugs.",
+];
+
+export const joke = async (args: string[]): Promise<string> => {
+  const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+  return randomJoke;
 };
 
 // Banner

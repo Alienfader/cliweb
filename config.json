@@ -1,20 +1,20 @@
 {
   "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "title": "Alienfader",
+  "name": "Thiago Goncalves",
+  "ascii": "Alienfader",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "alienfader",
+    "linkedin": "thiagogoncalvesofficial/"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
+  "email": "alienfaderr@gmail.com",
+  "ps1_hostname": "Alienfader",
   "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "repo": "https://github.com/Alienfader",
+  "resume_url": "https://raw.githubusercontent.com/Alienfader/cveinnt/master/resume.pdf",
   "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
+    "paypal": "https://paypal.me/alienfader",
+    "patreon": "https://patreon.com/alienfader"
   },
   "colors": {
     "light": {
