@@ -17,7 +17,7 @@
     "patreon": "https://patreon.com/alienfader"
   },
   "colors": {
-    "light": {
+    "light": { 
       "background": "#FBF1C9",
       "foreground": "#3C3836",
       "yellow": "#D79921",
