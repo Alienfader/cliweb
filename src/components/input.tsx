@@ -16,9 +16,9 @@ export const Input = ({
   clearHistory,
 }) => {
   const onSubmit = async (event: React.KeyboardEvent<HTMLInputElement>) => {
-    const commands: [string] = history
+    const commands = history
       .map(({ command }) => command)
-      .filter((command: string) => command);
+      .filter((command) => command);
 
     if (event.key === 'c' && event.ctrlKey) {
       event.preventDefault();
@@ -46,10 +46,8 @@ export const Input = ({
 
     if (event.key === 'ArrowUp') {
       event.preventDefault();
-      if (!commands.length) {
-        return;
-      }
-      const index: number = lastCommandIndex + 1;
+      if (!commands.length) return;
+      const index = lastCommandIndex + 1;
       if (index <= commands.length) {
         setLastCommandIndex(index);
         setCommand(commands[commands.length - index]);
@@ -58,10 +56,8 @@ export const Input = ({
 
     if (event.key === 'ArrowDown') {
       event.preventDefault();
-      if (!commands.length) {
-        return;
-      }
-      const index: number = lastCommandIndex - 1;
+      if (!commands.length) return;
+      const index = lastCommandIndex - 1;
       if (index > 0) {
         setLastCommandIndex(index);
         setCommand(commands[commands.length - index]);
@@ -72,10 +68,8 @@ export const Input = ({
     }
   };
 
-  const onChange = ({
-    target: { value },
-  }: React.ChangeEvent<HTMLInputElement>) => {
-    setCommand(value);
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setCommand(event.target.value);
   };
 
   return (
@@ -83,16 +77,11 @@ export const Input = ({
       <label htmlFor="prompt" className="flex-shrink">
         <Ps1 />
       </label>
-
       <input
         ref={inputRef}
         id="prompt"
         type="text"
-        className={`bg-light-background dark:bg-dark-background focus:outline-none flex-grow ${
-          commandExists(command) || command === ''
-            ? 'text-dark-green'
-            : 'text-dark-red'
-        }`}
+        className="bg-transparent border border-gray-300 dark:border-gray-700 rounded p-2 focus:outline-none flex-grow"
         value={command}
         onChange={onChange}
         autoFocus

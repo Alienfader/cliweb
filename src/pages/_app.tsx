@@ -1,12 +1,13 @@
 import React from 'react';
 import '../styles/global.css';
 import Head from 'next/head';
+import MatrixRain from '../components/MatrixRain';
 
 const App = ({ Component, pageProps }) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
 
   const onClickAnywhere = () => {
-    inputRef.current.focus();
+    inputRef.current?.focus();
   };
 
   return (
@@ -20,23 +21,18 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
 
-      <div
-        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"
-        onClick={onClickAnywhere}
-      >
-        <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
-          <Component {...pageProps} inputRef={inputRef} />
-        </main>
-      </div>
-      <div
-        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"
-        onClick={onClickAnywhere}
-      >
-        <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
-          <Component {...pageProps} inputRef={inputRef} />
-        </main>
-      </div>
+      {/* MatrixRain is rendered in the background */}
+      <MatrixRain />
 
+      {/* Content container with a semi-opaque background */}
+      <div
+        className="relative z-10 text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"
+        onClick={onClickAnywhere}
+      >
+        <main className="bg-white/95 dark:bg-black/95 w-full h-full p-2 rounded">
+          <Component {...pageProps} inputRef={inputRef} />
+        </main>
+      </div>
     </>
   );
 };

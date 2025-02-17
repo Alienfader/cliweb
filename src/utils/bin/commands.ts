@@ -198,12 +198,16 @@ export const joke = async (args: string[]): Promise<string> => {
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-    e Y8b     888     888 888'Y88 Y88b Y88 888'Y88   e Y8b     888 88e   888'Y88 888 88e  
-   d8b Y8b    888     888 888 ,'Y  Y88b Y8 888 ,'Y  d8b Y8b    888 888b  888 ,'Y 888 888D 
-  d888b Y8b   888     888 888C8   b Y88b Y 888C8   d888b Y8b   888 8888D 888C8   888 88"  
- d888888888b  888  ,d 888 888 ",d 8b Y88b  888 "  d888888888b  888 888P  888 ",d 888 b,   
-d8888888b Y8b 888,d88 888 888,d88 88b Y88b 888   d8888888b Y8b 888 88"   888,d88 888 88b, 
-                                                                                            
+    e Y8b     888     888 888'Y88 Y88b Y88   
+   d8b Y8b    888     888 888 ,'Y  Y88b Y8 
+  d888b Y8b   888     888 888C8   b Y88b Y
+ d888888888b  888  ,d 888 888 ",d 8b Y88b   
+d8888888b Y8b 888,d88 888 888,d88 88b Y88b 
+    888'Y88   e Y8b     888 88e   888'Y88 888 88e  
+    888 ,'Y  d8b Y8b    888 888b  888 ,'Y 888 888D 
+    888C8   d888b Y8b   888 8888D 888C8   888 88"  
+    888 "  d888888888b  888 888P  888 ",d 888 b,   
+    888   d8888888b Y8b 888 88"   888,d88 888 88b,                                                                                            
                                                                                             
 
 Type 'help' to see the list of available commands.
