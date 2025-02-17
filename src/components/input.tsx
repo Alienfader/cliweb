@@ -81,7 +81,7 @@ export const Input = ({
         ref={inputRef}
         id="prompt"
         type="text"
-        className="bg-transparent border border-gray-300 dark:border-gray-700 rounded p-2 focus:outline-none flex-grow"
+        className="bg-transparent  rounded p-2 focus:outline-none flex-grow"
         value={command}
         onChange={onChange}
         autoFocus
