@@ -18,22 +18,21 @@
   },
   "Matrix": {
     "light": {
-      "background": "#000000",
-      "foreground": "#00FF00",
-      "yellow": "#00FF00",
-      "green": "#00FF00",
-      "gray": "#00FF00",
-      "blue": "#00FF00",
-      "red": "#00FF00"
+      "background": "#F0F0F0",
+      "foreground": "#222222",
+      "yellow": "#F1C40F",
+      "green": "#27ae60",
+      "gray": "#95a5a6",
+      "blue": "#3498db",
+      "red": "#e74c3c"
     },
     "dark": {
       "background": "#000000",
-      "foreground": "#00FF00",
-      "yellow": "#00FF00",
-      "green": "#00FF00",
-      "gray": "#00FF00",
-      "blue": "#00FF00",
-      "red": "#00FF00"
+      "foreground": "#00FF41",
+      "green": "#00FF41",
+      "gray": "#333333",
+      "blue": "#1F51FF",
+      "red": "#FF073A"
     }
   }
 }
