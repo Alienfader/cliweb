@@ -55,12 +55,13 @@ export const repo = async (args: string[]): Promise<string> => {
 
 // About
 export const about = async (args: string[]): Promise<string> => {
-  return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+  return `Welcome to Alienfader's Terminal! 👽🛸
+
+📌 **General Commands**
+  - help       → Display available commands
+  - banner     → Show the welcome banner
+  - sumfetch   → Display a user summary
+  - blog       → Open the blog page`;
 };
 
 export const resume = async (args: string[]): Promise<string> => {
@@ -193,6 +194,11 @@ const jokes = [
 export const joke = async (args: string[]): Promise<string> => {
   const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
   return randomJoke;
+};
+export const blog = async (args: string[]): Promise<string> => {
+  // Navigate to the /blog page
+  window.location.href = '/blog';
+  return 'Opening blog...';
 };
 
 // Banner
